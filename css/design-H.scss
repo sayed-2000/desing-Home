@@ -1,0 +1,311 @@
+@use "./sass/madeQ" as *;
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #f1fbff;
+}
+
+// .sectoin {
+//   padding: 100px 0;
+//   margin-top: 50px;
+// }
+
+.navbar-brand {
+  letter-spacing: 2px;
+  margin-left: 10px;
+
+  span {
+    margin-right: -10px;
+  }
+
+  &:hover {
+    color: rgb(29, 28, 28);
+  }
+}
+
+.navbar-nav a {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.4s;
+
+  @include breakpoints(mobile) {
+    padding: 5px 8px;
+    &:hover {
+      background-color: #ccc;
+      border-radius: 3px;
+    }
+  }
+
+  @include breakpoints(small) {
+    padding: 5px 8px;
+    &:hover {
+      background-color: #ccc;
+      border-radius: 3px;
+      border-radius: 3px;
+    }
+  }
+}
+
+.carousel::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.carousel-caption {
+  z-index: 2;
+  position: absolute;
+  top: 40%;
+
+  @include breakpoints(mobile) {
+    h5 {
+      font-size: 25px !important;
+    }
+  }
+  h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  @include breakpoints(mobile) {
+    p {
+      font-size: 15px !important;
+      width: 100% !important;
+    }
+  }
+
+  p {
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+  }
+}
+
+.w-100 {
+  height: 100vh;
+}
+
+// start About
+
+.about {
+  // height: 100vh;
+  padding-top: 100px 20px;
+
+  @include breakpoints(mobile) {
+    & {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .row {
+      display: block;
+
+      @include breakpoints(mobile) {
+        .T {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+
+  img {
+    height: 370px;
+
+    @include breakpoints(mobile) {
+      width: 100%;
+    }
+  }
+
+  .col-lg-7 {
+    padding: 55px 0px 0 75px;
+
+    h3 {
+      @include breakpoints(mobile) {
+        width: 80%;
+        font-size: 30px;
+        font-weight: 400;
+      }
+    }
+
+    p {
+      text-align: left;
+    }
+  }
+}
+
+// Start Services
+@include breakpoints(mobile) {
+  .container .text {
+    margin-top: 80px;
+
+    h3 {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 500;
+    }
+
+    p {
+      line-height: 25px;
+      text-align: center;
+    }
+  }
+
+  .services .row {
+    justify-content: center;
+  }
+
+  .card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+
+.services {
+  padding: 100px 0;
+
+  .card {
+    text-align: center;
+    margin-top: 10px;
+
+    p {
+      font-weight: 300;
+    }
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .cs {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto 17px;
+  }
+
+  .card-title {
+    margin-top: 10px;
+  }
+}
+
+.services .row {
+  justify-content: center;
+  gap: 25px 0;
+}
+
+.services {
+  padding: 100px 0;
+
+  h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+}
+
+// Start Projcet
+
+.project {
+  padding: 0 0 100px;
+
+  .text {
+    text-align: center;
+
+    p {
+      width: 50%;
+      margin: 5px auto 50px;
+    }
+  }
+  .row {
+    justify-content: space-around;
+
+    .card {
+      border: 10px solid white;
+      border-radius: 0;
+      text-align: center;
+      margin-bottom: 55px;
+    }
+  }
+}
+
+// start Team
+.container {
+  .team {
+    padding: 0 0 100px 0;
+
+    @include breakpoints(mobile) {
+      .text {
+        margin-top: -5px;
+      }
+    }
+    .text {
+      text-align: center;
+
+      p {
+        width: 50%;
+        margin: 5px auto 50px;
+      }
+    }
+
+    .row {
+      justify-content: space-around;
+      .card {
+        text-align: center;
+        margin-left: 5px;
+        margin-bottom: 25px;
+        overflow: hidden;
+        border: 2px solid white;
+        border-radius: 0;
+
+        img {
+          border-radius: 50%;
+          margin-bottom: 10px;
+        }
+
+        h5 {
+          font-size: 20px;
+          font-weight: 400;
+        }
+
+        p {
+          font-size: 15px;
+        }
+
+        .row {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+// End Team
+
+// Start Contact
+.contact {
+  .text {
+    text-align: center;
+
+    p {
+      width: 50%;
+      margin: 5px auto 50px;
+    }
+  }
+}
+// End Contact
+
+// Start foot
+.foot {
+  text-align: center;
+}
